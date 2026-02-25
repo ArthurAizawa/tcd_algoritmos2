@@ -101,5 +101,5 @@ int main()
     elapsedtime = (fim.QuadPart - inicio.QuadPart) * 1000.0 / frequency.QuadPart;
     printf(" %2d - Time: %.16lf ms\n", elapsedtime);
 
-    return 1;
+    return 0;
 }
