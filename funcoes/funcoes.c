@@ -1,6 +1,6 @@
 #include "funcoes.h"
 #include <stdio.h>
-void carregarArquivo(char path[], char modo)
+void carregarArquivo(char path[])
 {
 }
 
