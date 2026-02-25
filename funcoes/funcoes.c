@@ -4,15 +4,35 @@ void carregarArquivo(char path[])
 {
 }
 
-void buscarElemento(int vet[], int n, int opc)
+int buscarElemento(int vet[], int n, int opc, int x)
 {
     //busca linear
-    if(opc == 1){          
+    if(opc == 1)
+    {          
         
     } 
     //busca binaria
-    else if(opc == 2){ //else if
-        
+    else if(opc == 2)
+    { 
+        int j = n -1, i = 0;
+        while(i <= j)
+        {
+            int meio = (i + j)/2;
+            meio = floor(meio);
+            if(x == vet[meio])
+            {
+                return meio;
+            }
+            if(j > vet[i])
+            {
+                j = meio + 1;
+            }
+            if(j < vet[i]) 
+            {
+                j = meio - 1;
+            }
+        }
+        return -1;
     }
 }
 
