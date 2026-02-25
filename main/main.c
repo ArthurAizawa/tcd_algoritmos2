@@ -26,6 +26,7 @@ int main()
         printf("==================================\n");
         scanf("%d", &opc);
 
+
         switch(opc)  
         {        
             //otimizar teste de arquivo
@@ -100,5 +101,5 @@ int main()
     elapsedtime = (fim.QuadPart - inicio.QuadPart) * 1000.0 / frequency.QuadPart;
     printf(" %2d - Time: %.16lf ms\n", elapsedtime);
 
-    return 0;
+    return 1;
 }
