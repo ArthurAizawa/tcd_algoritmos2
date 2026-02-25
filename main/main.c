@@ -29,6 +29,7 @@ int main()
         switch(opc)  
         {        
             //otimizar teste de arquivo
+            bool opc3;
             case 1:
                 char path[20];
                 bool arquivo;
@@ -42,11 +43,18 @@ int main()
                     printf("Aviso: Voce deve carregar um arquivo (Opcao 1) antes de buscar.\n");
                 } else{
                     int subopc;
-                    printf("1. Busca Linear\n2. Busca Binaria\n");
+                    printf("1. Busca Linear\n2. Busca Binaria\n"); 
                     printf("Escolha: ");
                     scanf("%d", &subopc);
-                    if(subopc == 1){
-                        
+                    if (subopc == 1 )
+                    {
+                        // chamar a funçao linear
+                    } else if (subopc == 2)
+                    {
+                        // chamar a funçao binaria
+                    } else
+                    {
+                        printf("Opcao Invalida");
                     }
                 }
                 break;
@@ -64,35 +72,50 @@ int main()
 
                     switch (subopc)
                         {
-                    case 1:
+                        
+                        case 1:
+
                         Insertion_Sort(); // funcao Insertion Sort
                         break;
 
                         case 2:
-                            Bubble_Sort(); // funcao Bubble Sort
-                            break;
+                        Bubble_Sort(); // funcao Bubble Sort
+                        break;
                         case 3:
-                            Selection_Sort(); // funcao Selection Sort
+                        Selection_Sort(); // funcao Selection Sort
                         break;
                         case 4:
-                            Merge_Sort(); // funcao Merge Sort
-                            break;
+                        Merge_Sort(); // funcao Merge Sort
+                        break;
                         case 5:
-                            Quick_Sort(); // funcao Quick Sort
-                            break;
+                        Quick_Sort(); // funcao Quick Sort
+                        break;
                         case 6:
-                            extra(); // funcao extra a ser escolhida
-                            break;    
+                        extra(); // funcao extra a ser escolhida
+                        break;    
                         
                         default:
                             break;
+
+                        opc3 = true;
                     }
                 }
                 break;
-                case 4:
+            case 4:
+                if (!opc3)
+                {
+                    printf("Nenhum Algoritimo foi executado, Retorne (Opcao 3).\n");
+                }
+                
+                printf("Gerando Relatorio (LOG).");
+                // funcao relatorio  log
+                
                     break;
-                case 5:
-                    break;
+            case 5:
+              printf("╔╗╔═╦╗\n");  
+              printf("║╚╣║║╚╗\n"); 
+              printf("╚═╩═╩═╝\n");
+              sair = false;  
                                
                 default:
                     break;
