@@ -42,9 +42,12 @@ int main()
                     printf("Aviso: Voce deve carregar um arquivo (Opcao 1) antes de buscar.\n");
                 } else{
                     int subopc;
-                    printf("Escolha O Algoritimo"); //escolha qualquer desgraça
+                    printf("1. Busca Linear\n2. Busca Binaria\n");
                     printf("Escolha: ");
                     scanf("%d", &subopc);
+                    if(subopc == 1){
+                        
+                    }
                 }
                 break;
 
