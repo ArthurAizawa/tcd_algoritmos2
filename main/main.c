@@ -33,8 +33,7 @@ int main()
         switch(opc)  
         {         
             case 1:
-                // Implementação simplificada para teste
-                 printf("Implementar funcao carregar arquivo\n");
+                 carregarArquivo(path);
                  printf("Arquivo carregado com sucesso!\n");
                  arquivo = true;     
                 break;
@@ -49,8 +48,10 @@ int main()
                     scanf("%d", &subopc);
                     if (subopc == 1) {
                         printf("Busca linear executada.\n");
+                        //buscarElemento(vet, n, subopc, x);
                     } else if (subopc == 2) {
                         printf("Busca binaria executada.\n");
+                        //buscarElemento(vet, n, subopc, x);
                     } else {
                         printf("Opcao Invalida\n");
                     }
@@ -75,18 +76,15 @@ int main()
                         {
                         
                         case 1:
-                        printf("Ok");
-
-                        //Insertion_Sort(); // funcao Insertion Sort
+                        //InsertSort (vet, n);
                         break;
 
                         case 2:
-                        printf("Ok");
-                        //Bubble_Sort(); // funcao Bubble Sort
+                        //BubbleSort(vet, n);
+                        
                         break;
                         case 3:
-                        printf("Ok");
-                        //Selection_Sort(); // funcao Selection Sort
+                        //SelectionSort( vet, n);
                         break;
                         case 4:
                         printf("Ok");

@@ -91,6 +91,31 @@ void InsertSort (int vet[], int n)
         // a key será colocada na posição certa
         vet[j + 1] = key;
     }
+}
 
+void SelectionSort(int vet[], int n)
+{
+    int i, j, menor, troca;
 
+    for (i = 0; i < n - 1; i++)
+    {
+        menor = i;
+
+        // Encontra o menor elemento
+        for (j = i + 1; j < n; j++)
+        {
+            if (vet[j] < vet[menor])
+            {
+                menor = j;
+            }
+        }
+       
+        // Troca o menor elemento econtrado para a posicao mais a esquerda
+        if (menor != i)
+        {
+            troca = vet[i];
+            vet[i] = vet[menor];
+            vet[menor] = troca;
+        }
+    }
 }
