@@ -40,7 +40,7 @@ int main()
 
             case 2:
                 if (!arquivo) {
-                    printf("Aviso: Voce deve carregar um arquivo (Opcao 1) antes de buscar.\n");
+                    printf(" Aviso: Voce deve carregar um arquivo (Opcao 1) antes de buscar.\n");
                 } else {
                     int subopc;
                     printf("1. Busca Linear\n2. Busca Binaria\n"); 
