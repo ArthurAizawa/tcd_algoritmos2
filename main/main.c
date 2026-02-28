@@ -29,6 +29,7 @@ int main()
         printf("Escolha: ");
         scanf("%d", &opc);
 
+
         switch(opc)  
         {         
             case 1:
