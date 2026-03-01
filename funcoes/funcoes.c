@@ -1,6 +1,7 @@
 #include "funcoes.h"
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 
 void carregarArquivo(char path[])
@@ -118,4 +119,82 @@ void SelectionSort(int vet[], int n)
             vet[menor] = troca;
         }
     }
+}
+
+void MergeSort(int vet[], int inicio, int fim){
+
+    
+    int inicio = 0, fim = 0, meio;
+
+    //esqueleto, usar alocaçao dinamica
+    // declarando o tamanho de fim.
+    for (int i = 0; i < fim; i++)
+    {
+        fim++;
+    }
+    
+    if (inicio < fim)
+    {
+        meio = floor((inicio+fim )/2);
+        Mergesort(vet, inicio, fim );
+        Mergesort(vet, meio+1, fim );
+        Merge(vet, inicio, meio, fim);
+    }
+    
+}
+
+
+void Merge(int vet[], int inicio, int meio, int fim)
+{
+    int *VetAux, M1, M2, tam, i, j, k;
+    int fim1 = 0, fim2 = 0 ;
+    tam = fim1 - inicio+1;
+
+    M1 = inicio;
+    M2 = meio+1;
+
+    VetAux = (int*)malloc(tam*sizeof(int));
+    if (tam != NULL) 
+    {
+        for ( i = 0; i < tam; i++)
+        {
+            if (!fim1 && !fim2)
+            {
+                if (vet[M1] < vet[M2])
+                {
+                    VetAux[i] = vet[M1++];
+                }
+                else
+                {
+                    VetAux[i] = vet[M2++];
+                }
+                if(M1>meio) fim1=1;
+                if(M2>fim) fim2=1;
+                
+            }
+
+            // se ainda houver algum elemento nos vetores (M1 e M2), o elemento sera inserido no vetor 
+            else 
+            {
+                if (!fim)
+                {
+                    VetAux[i] = vet[M1++];
+                }    
+                else 
+                {
+                    VetAux[i] = vet[M2++];
+                    
+                }
+            }
+        }
+        
+        // copia do auxiliar e passa para o definitivo
+        for (j = 0, k = inicio; j < tam; j++, k++)
+        {
+         vet[k] = VetAux[j];   
+        }
+
+        free(VetAux);
+    }
+    
 }

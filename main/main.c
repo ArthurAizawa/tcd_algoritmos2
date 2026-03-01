@@ -88,7 +88,7 @@ int main()
                         break;
                         case 4:
                         printf("Ok");
-                        //Merge_Sort(); // funcao Merge Sort
+                        //MergeSort(vet, inicio,fim);
                         break;
                         case 5:
                         printf("Ok");
