@@ -4,3 +4,6 @@ void ordernarDados(int vet[], int n);
 void gerarRelatorio();
 void BubbleSort(int vet[], int n);
 void InsertSort (int vet[], int n);
+void SelectionSort(int vet[], int n);
+void MergeSort(int vet[], int inicio, int fim);
+void Merge(int vet[], int inicio, int meio, int fim);
